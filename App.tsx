@@ -148,7 +148,7 @@ const products = [
     id: 'romega3-500',
     name: 'ROMEGA 3 (500mg)',
     category: 'General Health',
-    img: 'https://images.unsplash.com/photo-1471864190281-ad5fe9bb0724?auto=format&fit=crop&q=80&w=400',
+    img: '/images/romega3-500.png',
     desc: {
       EN: "Fish Oil EPA + DHA (500mg). Suitable for adults and children for cardiovascular and immune balance.",
       FR: "Huile de poisson EPA + DHA (500mg). Convient aux adultes et enfants pour l'équilibre cardiaque et immunitaire.",
@@ -159,7 +159,7 @@ const products = [
     id: 'romega3-d3',
     name: 'ROMEGA 3 + Vit D3',
     category: 'Bone & Immunity',
-    img: 'https://images.unsplash.com/photo-1527632911563-ee4b6b720327?auto=format&fit=crop&q=80&w=400',
+    img: '/images/romega3-d3.png',
     desc: {
       EN: "Omega 3 combined with Vitamin D3. Enhances calcium absorption, strengthens bone tissue, and supports immunity.",
       FR: "Oméga 3 combiné à la Vitamine D3. Améliore l'absorption du calcium, renforce le tissu osseux et l'immunité.",
@@ -192,7 +192,7 @@ const products = [
     id: 'rovit-e',
     name: 'ROVIT E',
     category: 'Skin & Hair',
-    img: 'https://images.unsplash.com/photo-1550572017-ed20bb063162?auto=format&fit=crop&q=80&w=400',
+    img: '/images/rovit-e.png',
     desc: {
       EN: "Vitamin E 400 UI. Powerful antioxidant that protects cells against oxidative stress. Ideal for skin and hair health.",
       FR: "Vitamine E 400 UI. Antioxydant puissant qui protège les cellules contre le stress oxydatif. Idéal pour la peau et les cheveux.",
