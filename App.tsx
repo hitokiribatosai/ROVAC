@@ -1,16 +1,16 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Beaker, 
-  Dna, 
-  Microscope, 
-  ShieldCheck, 
-  Globe, 
-  ArrowRight, 
-  Menu, 
-  X, 
-  FlaskConical, 
+import {
+  Beaker,
+  Dna,
+  Microscope,
+  ShieldCheck,
+  Globe,
+  ArrowRight,
+  Menu,
+  X,
+  FlaskConical,
   TestTubes,
   ChevronRight,
   Activity,
@@ -170,7 +170,7 @@ const products = [
     id: 'rovit-d3',
     name: 'ROVIT D3',
     category: 'Vitamin Support',
-    img: 'https://images.unsplash.com/photo-1626808642875-0aa545482dfb?auto=format&fit=crop&q=80&w=400',
+    img: '/images/rovit-d3.png',
     desc: {
       EN: "Vitamin D3 (Cholecalciferol) 50,000 UI. High potency dose to prevent deficiency and boost immune system.",
       FR: "Vitamine D3 (Cholécalciférol) 50 000 UI. Dose haute puissance pour prévenir les carences et booster l'immunité.",
@@ -203,7 +203,7 @@ const products = [
     id: 'prostac',
     name: 'PROSTAC Caps',
     category: "Men's Health",
-    img: 'https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&q=80&w=400',
+    img: '/images/prostac.png',
     desc: {
       EN: "Virgin Pumpkin Seed Oil (700mg). Natural support for masculine urinary comfort.",
       FR: "Huile vierge de pépins de courge (700mg). Soutien naturel pour le confort urinaire masculin.",
@@ -214,7 +214,7 @@ const products = [
     id: 'charborovac',
     name: 'CHARBOVAC Plus',
     category: 'Digestion',
-    img: 'https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&q=80&w=400',
+    img: '/images/charborovac.png',
     desc: {
       EN: "Activated Charcoal, Anise, and Peppermint. Relieves digestive discomfort and bloating.",
       FR: "Charbon Actif, Anis et Menthe Poivrée. Soulage l'inconfort digestif et les ballonnements.",
@@ -225,7 +225,7 @@ const products = [
     id: 'gesta-elle',
     name: 'Gesta-elle',
     category: 'Maternity',
-    img: 'https://images.unsplash.com/photo-1523206489230-c012c64b2b48?auto=format&fit=crop&q=80&w=400',
+    img: '/images/gesta-elle.png',
     desc: {
       EN: "Complete formula with Vitamins, Minerals, and Omega 3. For preconception, pregnancy, and nursing.",
       FR: "Formule complète avec Vitamines, Minéraux et Oméga 3. Pour préconception, grossesse et allaitement.",
@@ -236,7 +236,7 @@ const products = [
     id: 'rovyx',
     name: 'ROVYX',
     category: 'Vitality',
-    img: 'https://images.unsplash.com/photo-1550572017-ed20bb063162?auto=format&fit=crop&q=80&w=400',
+    img: '/images/rovyx.png',
     desc: {
       EN: "Natural formula to reinforce male performance, libido, and confidence.",
       FR: "Formule naturelle pour renforcer la performance masculine, la libido et la confiance.",
@@ -246,7 +246,7 @@ const products = [
 ];
 
 const ProductCard: React.FC<{ product: typeof products[0], lang: Language, idx?: number }> = ({ product, lang, idx = 0 }) => (
-  <motion.div 
+  <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ delay: idx * 0.1 }}
@@ -296,15 +296,14 @@ const App: React.FC = () => {
     <div className={`relative min-h-screen gradient-mesh selection:bg-teal-200 ${isRTL ? 'font-arabic' : ''}`}>
       <ParticleBackground />
       <GridShimmer />
-      
+
       {/* Parallax Background Shapes */}
       <ParallaxShape color="bg-teal-400" className="w-[40rem] h-[40rem] -top-40 -left-40" speed={0.5} />
       <ParallaxShape color="bg-blue-400" className="w-[30rem] h-[30rem] top-[20%] -right-20" speed={0.8} />
 
       {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4 ${
-        isScrolled ? "bg-white/70 backdrop-blur-md shadow-sm border-b border-slate-200" : "bg-transparent"
-      }`}>
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4 ${isScrolled ? "bg-white/70 backdrop-blur-md shadow-sm border-b border-slate-200" : "bg-transparent"
+        }`}>
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-gradient-to-tr from-teal-600 to-blue-700 rounded-xl flex items-center justify-center text-white shadow-lg">
@@ -331,9 +330,8 @@ const App: React.FC = () => {
                   <button
                     key={l}
                     onClick={() => setLang(l)}
-                    className={`px-3 py-1 rounded-full text-xs font-bold transition-all ${
-                      lang === l ? "bg-white text-teal-600 shadow-sm" : "text-slate-500 hover:text-slate-900"
-                    }`}
+                    className={`px-3 py-1 rounded-full text-xs font-bold transition-all ${lang === l ? "bg-white text-teal-600 shadow-sm" : "text-slate-500 hover:text-slate-900"
+                      }`}
                   >
                     {l}
                   </button>
@@ -403,9 +401,9 @@ const App: React.FC = () => {
           </div>
 
           <div className="mt-16 flex justify-center">
-             <GlowButton onClick={() => setIsProductModalOpen(true)}>
-               {t.viewAll}
-             </GlowButton>
+            <GlowButton onClick={() => setIsProductModalOpen(true)}>
+              {t.viewAll}
+            </GlowButton>
           </div>
         </div>
       </section>
@@ -414,12 +412,12 @@ const App: React.FC = () => {
       <section id="lab" className="py-24 px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-20">
           <div className="md:w-1/2">
-             <div className="grid grid-cols-2 gap-4">
-                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400" className="rounded-2xl shadow-lg h-60 w-full object-cover" alt="Machinery" />
-                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=400" className="rounded-2xl shadow-lg h-60 w-full object-cover mt-8" alt="Clean Room" />
-                <img src="https://images.unsplash.com/photo-1631549916768-4119b295f926?auto=format&fit=crop&q=80&w=400" className="rounded-2xl shadow-lg h-60 w-full object-cover -mt-8" alt="Production" />
-                <img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=400" className="rounded-2xl shadow-lg h-60 w-full object-cover" alt="Quality Control" />
-             </div>
+            <div className="grid grid-cols-2 gap-4">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400" className="rounded-2xl shadow-lg h-60 w-full object-cover" alt="Machinery" />
+              <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=400" className="rounded-2xl shadow-lg h-60 w-full object-cover mt-8" alt="Clean Room" />
+              <img src="https://images.unsplash.com/photo-1631549916768-4119b295f926?auto=format&fit=crop&q=80&w=400" className="rounded-2xl shadow-lg h-60 w-full object-cover -mt-8" alt="Production" />
+              <img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=400" className="rounded-2xl shadow-lg h-60 w-full object-cover" alt="Quality Control" />
+            </div>
           </div>
           <div className="md:w-1/2">
             <div className="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center text-teal-600 mb-8">
@@ -448,7 +446,7 @@ const App: React.FC = () => {
           <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
             <div className="w-full h-full border-[40px] border-white/20 rounded-full translate-x-1/2" />
           </div>
-          
+
           <div className="relative z-10 text-center md:text-left grid md:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">{lang === 'EN' ? 'Scale Your Pharmaceutical Business' : lang === 'FR' ? 'Développez Votre Activité Pharmaceutique' : 'قم بتطوير عملك الصيدلاني'}</h2>
@@ -545,21 +543,21 @@ const App: React.FC = () => {
             className="fixed inset-0 z-[60] bg-white/95 backdrop-blur-xl overflow-y-auto"
           >
             <div className="max-w-7xl mx-auto px-6 py-12">
-               <div className="flex justify-between items-center mb-12">
-                  <h2 className="text-3xl font-bold text-slate-900">{t.servicesTitle}</h2>
-                  <button
-                    onClick={() => setIsProductModalOpen(false)}
-                    className="p-2 bg-slate-100 rounded-full hover:bg-slate-200 transition-colors"
-                  >
-                    <X size={24} />
-                  </button>
-               </div>
+              <div className="flex justify-between items-center mb-12">
+                <h2 className="text-3xl font-bold text-slate-900">{t.servicesTitle}</h2>
+                <button
+                  onClick={() => setIsProductModalOpen(false)}
+                  className="p-2 bg-slate-100 rounded-full hover:bg-slate-200 transition-colors"
+                >
+                  <X size={24} />
+                </button>
+              </div>
 
-               <div className="grid md:grid-cols-3 gap-8">
-                  {products.map((product, idx) => (
-                    <ProductCard key={product.id} product={product} lang={lang} idx={idx} />
-                  ))}
-               </div>
+              <div className="grid md:grid-cols-3 gap-8">
+                {products.map((product, idx) => (
+                  <ProductCard key={product.id} product={product} lang={lang} idx={idx} />
+                ))}
+              </div>
             </div>
           </motion.div>
         )}
