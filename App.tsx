@@ -104,7 +104,7 @@ const products = [
     id: 'vitzinc',
     name: 'VITZINC C',
     category: 'Immunity',
-    img: 'https://images.unsplash.com/photo-1616671276445-169d9c133301?auto=format&fit=crop&q=80&w=400',
+    img: '/images/vitzinc-c.png',
     desc: {
       EN: "Vitamin C (250mg) + Zinc Gluconate (10mg). Essential for collagen synthesis, cell protection, and immune defense.",
       FR: "Vitamine C (250mg) + Gluconate de Zinc (10mg). Essentiel pour la synthèse du collagène, la protection cellulaire et l'immunité.",
@@ -115,7 +115,7 @@ const products = [
     id: 'romega3-e',
     name: 'ROMEGA 3 + Vit E',
     category: 'Cardiovascular',
-    img: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=400',
+    img: '/images/romega3-vite.png',
     desc: {
       EN: "Rich in EPA & DHA (1000mg) with Vitamin E. Supports heart, nervous system, and vision. No fishy odor.",
       FR: "Riche en EPA & DHA (1000mg) avec Vitamine E. Soutient le cœur, le système nerveux et la vision. Sans odeur de poisson.",
@@ -126,7 +126,7 @@ const products = [
     id: 'artromega',
     name: 'ARTROMEGA',
     category: 'Joint Health',
-    img: 'https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=400',
+    img: '/images/artromega-300.png',
     desc: {
       EN: "Avocado and Soy unsaponifiables. Relieves joint pain and contributes to osteoarthritis comfort.",
       FR: "Insaponifiables d'avocat et de soja. Soulage les douleurs articulaires et l'arthrose.",
@@ -137,7 +137,7 @@ const products = [
     id: 'cla-400',
     name: 'CLA ROVAC 400',
     category: 'Weight Management',
-    img: 'https://images.unsplash.com/photo-1550572017-ed20bb063162?auto=format&fit=crop&q=80&w=400',
+    img: '/images/cla-rovac-400.png',
     desc: {
       EN: "Conjugated Linoleic Acid (Safflower Oil). Helps prevent fat accumulation and maintains healthy cholesterol levels.",
       FR: "Acide Linoléique Conjugué (Huile de Carthame). Aide à prévenir l'accumulation de graisse et maintient le cholestérol.",
@@ -181,7 +181,7 @@ const products = [
     id: 'astaxanthine',
     name: 'ASTAXANTHINE',
     category: 'Antioxidant',
-    img: 'https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?auto=format&fit=crop&q=80&w=400',
+    img: '/images/astaxanthine.png',
     desc: {
       EN: "Natural Astaxanthin 8mg. 6000x more powerful than Vit C. Protection for skin, eyes, and cellular health.",
       FR: "Astaxanthine naturelle 8mg. 6000x plus puissant que la Vit C. Protection pour la peau, les yeux et la santé cellulaire.",
