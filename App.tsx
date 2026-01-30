@@ -154,7 +154,11 @@ const products = [
   {
     id: 'vitzinc',
     name: 'VITZINC C',
-    category: 'Immunity',
+    category: {
+      EN: 'Immunity',
+      FR: 'Immunité',
+      AR: 'المناعة'
+    },
     img: '/images/vitzinc-c.png',
     desc: {
       EN: "Vitamin C (250mg) + Zinc Gluconate (10mg). Essential for collagen synthesis, cell protection, and immune defense.",
@@ -165,7 +169,11 @@ const products = [
   {
     id: 'romega3-e',
     name: 'ROMEGA 3 + Vit E',
-    category: 'Cardiovascular',
+    category: {
+      EN: 'Cardiovascular',
+      FR: 'Cardiovasculaire',
+      AR: 'القلب والأوعية'
+    },
     img: '/images/romega3-vite.png',
     desc: {
       EN: "Rich in EPA & DHA (1000mg) with Vitamin E. Supports heart, nervous system, and vision. No fishy odor.",
@@ -176,7 +184,11 @@ const products = [
   {
     id: 'artromega',
     name: 'ARTROMEGA',
-    category: 'Joint Health',
+    category: {
+      EN: 'Joint Health',
+      FR: 'Santé Articulaire',
+      AR: 'صحة المفاصل'
+    },
     img: '/images/artromega-300.png',
     desc: {
       EN: "Avocado and Soy unsaponifiables. Relieves joint pain and contributes to osteoarthritis comfort.",
@@ -187,7 +199,11 @@ const products = [
   {
     id: 'cla-400',
     name: 'CLA ROVAC 400',
-    category: 'Weight Management',
+    category: {
+      EN: 'Weight Management',
+      FR: 'Gestion du Poids',
+      AR: 'إدارة الوزن'
+    },
     img: '/images/cla-rovac-400.png',
     desc: {
       EN: "Conjugated Linoleic Acid (Safflower Oil). Helps prevent fat accumulation and maintains healthy cholesterol levels.",
@@ -198,7 +214,11 @@ const products = [
   {
     id: 'romega3-500',
     name: 'ROMEGA 3 (500mg)',
-    category: 'General Health',
+    category: {
+      EN: 'General Health',
+      FR: 'Santé Générale',
+      AR: 'الصحة العامة'
+    },
     img: '/images/romega3-500.png',
     desc: {
       EN: "Fish Oil EPA + DHA (500mg). Suitable for adults and children for cardiovascular and immune balance.",
@@ -209,7 +229,11 @@ const products = [
   {
     id: 'romega3-d3',
     name: 'ROMEGA 3 + Vit D3',
-    category: 'Bone & Immunity',
+    category: {
+      EN: 'Bone & Immunity',
+      FR: 'Os & Immunité',
+      AR: 'العظام والمناعة'
+    },
     img: '/images/romega3-d3.png',
     desc: {
       EN: "Omega 3 combined with Vitamin D3. Enhances calcium absorption, strengthens bone tissue, and supports immunity.",
@@ -220,7 +244,11 @@ const products = [
   {
     id: 'rovit-d3',
     name: 'ROVIT D3',
-    category: 'Vitamin Support',
+    category: {
+      EN: 'Vitamin Support',
+      FR: 'Support Vitaminique',
+      AR: 'دعم الفيتامينات'
+    },
     img: '/images/rovit-d3.png',
     desc: {
       EN: "Vitamin D3 (Cholecalciferol) 50,000 UI. High potency dose to prevent deficiency and boost immune system.",
@@ -231,7 +259,11 @@ const products = [
   {
     id: 'astaxanthine',
     name: 'ASTAXANTHINE',
-    category: 'Antioxidant',
+    category: {
+      EN: 'Antioxidant',
+      FR: 'Antioxydant',
+      AR: 'مضاد للأكسدة'
+    },
     img: '/images/astaxanthine.png',
     desc: {
       EN: "Natural Astaxanthin 8mg. 6000x more powerful than Vit C. Protection for skin, eyes, and cellular health.",
@@ -242,7 +274,11 @@ const products = [
   {
     id: 'rovit-e',
     name: 'ROVIT E',
-    category: 'Skin & Hair',
+    category: {
+      EN: 'Skin & Hair',
+      FR: 'Peau & Cheveux',
+      AR: 'البشرة والشعر'
+    },
     img: '/images/rovit-e.png',
     desc: {
       EN: "Vitamin E 400 UI. Powerful antioxidant that protects cells against oxidative stress. Ideal for skin and hair health.",
@@ -253,7 +289,11 @@ const products = [
   {
     id: 'prostac',
     name: 'PROSTAC Caps',
-    category: "Men's Health",
+    category: {
+      EN: "Men's Health",
+      FR: "Santé Masculine",
+      AR: "صحة الرجل"
+    },
     img: '/images/prostac.png',
     desc: {
       EN: "Virgin Pumpkin Seed Oil (700mg). Natural support for masculine urinary comfort.",
@@ -264,7 +304,11 @@ const products = [
   {
     id: 'charborovac',
     name: 'CHARBOVAC Plus',
-    category: 'Digestion',
+    category: {
+      EN: 'Digestion',
+      FR: 'Digestion',
+      AR: 'الهضم'
+    },
     img: '/images/charborovac.png',
     desc: {
       EN: "Activated Charcoal, Anise, and Peppermint. Relieves digestive discomfort and bloating.",
@@ -275,7 +319,11 @@ const products = [
   {
     id: 'gesta-elle',
     name: 'Gesta-elle',
-    category: 'Maternity',
+    category: {
+      EN: 'Maternity',
+      FR: 'Maternité',
+      AR: 'أمومة'
+    },
     img: '/images/gesta-elle.png',
     desc: {
       EN: "Complete formula with Vitamins, Minerals, and Omega 3. For preconception, pregnancy, and nursing.",
@@ -286,7 +334,11 @@ const products = [
   {
     id: 'rovyx',
     name: 'ROVYX',
-    category: 'Vitality',
+    category: {
+      EN: 'Vitality',
+      FR: 'Vitalité',
+      AR: 'حيوية'
+    },
     img: '/images/rovyx.png',
     desc: {
       EN: "Natural formula to reinforce male performance, libido, and confidence.",
@@ -307,7 +359,7 @@ const ProductCard: React.FC<{ product: typeof products[0], lang: Language, idx?:
     <div className="relative h-64 overflow-hidden shrink-0">
       <img src={product.img} alt={product.name} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
       <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest text-teal-700">
-        {product.category}
+        {product.category[lang]}
       </div>
     </div>
     <div className="p-8 flex flex-col flex-grow">
