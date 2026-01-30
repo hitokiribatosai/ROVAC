@@ -37,17 +37,34 @@ const translations = {
     servicesTitle: "Our Products",
     servicesSub: "High-quality pharmaceutical supplements manufactured in our ISO-certified facilities.",
     labTitle: "World-Class Infrastructure",
-    labSub: "Our Algiers facility utilizes advanced robotics and clean-room environments for large-scale production.",
+    labSub: "Our Annaba facility utilizes advanced robotics and clean-room environments for large-scale production.",
     wholesaleLabel: "Wholesale Only",
     copyright: "© 2024 ROVAC Laboratory. All rights reserved.",
     viewAll: "View All Products",
+    unitsMonth: "Units / Month",
+    facilityTour: "Facility Tour",
+    scaleBusiness: "Scale Your Pharmaceutical Business",
+    scaleSub: "Join our elite network of distributors across Algeria. We provide competitive pricing, logistical support, and certified high-quality products.",
+    dealerPortal: "Dealer Portal",
+    qualityAssurance: "Quality Assurance",
+    gmpCompliant: "GMP Compliant",
+    nationalLogistics: "National Logistics",
+    allWilayas: "All 58 Wilayas",
+    productCertification: "Product Certification",
+    mohRegistered: "MOH Registered",
+    b2bPortal: "B2B Portal",
+    catalogDownload: "Catalog Download",
+    resellerTerms: "Reseller Terms",
+    compliance: "Compliance",
+    address: "12 Industrial Zone, Annaba, Algeria",
     nav: {
       home: "Home",
       products: "Products",
       lab: "Infrastructure",
       wholesale: "Wholesale",
       contact: "Contact"
-    }
+    },
+    languagesTitle: "Languages"
   },
   FR: {
     tagline: "Premier Grossiste Pharmaceutique en Algérie",
@@ -61,17 +78,34 @@ const translations = {
     servicesTitle: "Nos Produits",
     servicesSub: "Compléments pharmaceutiques de haute qualité fabriqués dans nos installations certifiées ISO.",
     labTitle: "Infrastructure de Classe Mondiale",
-    labSub: "Notre site d'Alger utilise la robotique avancée et des environnements de salle blanche pour la production à grande échelle.",
+    labSub: "Notre site d'Annaba utilise la robotique avancée et des environnements de salle blanche pour la production à grande échelle.",
     wholesaleLabel: "Vente en Gros Uniquement",
     copyright: "© 2024 Laboratoire ROVAC. Tous droits réservés.",
     viewAll: "Voir Tous les Produits",
+    unitsMonth: "Unités / Mois",
+    facilityTour: "Visiter l'Usine",
+    scaleBusiness: "Développez Votre Activité Pharmaceutique",
+    scaleSub: "Rejoignez notre réseau d'élite de distributeurs à travers l'Algérie. Nous offrons des prix compétitifs et des produits de haute qualité.",
+    dealerPortal: "Portail Revendeur",
+    qualityAssurance: "Assurance Qualité",
+    gmpCompliant: "Conforme BPF",
+    nationalLogistics: "Logistique Nationale",
+    allWilayas: "Toutes les 58 Wilayas",
+    productCertification: "Certification Produits",
+    mohRegistered: "Enregistré MSPRH",
+    b2bPortal: "Portail B2B",
+    catalogDownload: "Téléchargement Catalogue",
+    resellerTerms: "Conditions Revendeur",
+    compliance: "Conformité",
+    address: "12 Zone Industrielle, Annaba, Algérie",
     nav: {
       home: "Accueil",
       products: "Produits",
       lab: "Infrastructure",
       wholesale: "Vente en Gros",
       contact: "Contact"
-    }
+    },
+    languagesTitle: "Langues"
   },
   AR: {
     tagline: "الموزع الصيدلاني الرائد في الجزائر",
@@ -85,17 +119,34 @@ const translations = {
     servicesTitle: "منتجاتنا",
     servicesSub: "مكملات صيدلانية عالية الجودة مصنعة في مرافقنا المعتمدة من قبل الأيزو.",
     labTitle: "بنية تحتية عالمية",
-    labSub: "تستخدم منشأتنا في الجزائر الروبوتات المتقدمة وبيئات الغرف النظيفة للإنتاج واسع النطاق.",
+    labSub: "تستخدم منشأتنا في عنابة الروبوتات المتقدمة وبيئات الغرف النظيفة للإنتاج واسع النطاق.",
     wholesaleLabel: "للبيع بالجملة فقط",
     copyright: "© 2024 مختبر روفاك. جميع الحقوق محفوظة.",
     viewAll: "عرض جميع المنتجات",
+    unitsMonth: "وحدة / شهر",
+    facilityTour: "جولة في المنشأة",
+    scaleBusiness: "قم بتطوير عملك الصيدلاني",
+    scaleSub: "انضم إلى شبكة النخبة من الموزعين في جميع أنحاء الجزائر. نحن نقدم أسعارًا تنافسية ومنتجات عالية الجودة معتمدة.",
+    dealerPortal: "بوابة الوكلاء",
+    qualityAssurance: "ضمان الجودة",
+    gmpCompliant: "مطابق لـ GMP",
+    nationalLogistics: "لوجستيات وطنية",
+    allWilayas: "جميع الولايات الـ 58",
+    productCertification: "شهادة المنتج",
+    mohRegistered: "مسجل بوزارة الصحة",
+    b2bPortal: "بوابة B2B",
+    catalogDownload: "تحميل الكتالوج",
+    resellerTerms: "شروط الموزع",
+    compliance: "الامتثال",
+    address: "12 المنطقة الصناعية، عنابة، الجزائر",
     nav: {
       home: "الرئيسية",
       products: "المنتجات",
       lab: "البنية التحتية",
       wholesale: "الجملة",
       contact: "اتصل بنا"
-    }
+    },
+    languagesTitle: "اللغات"
   }
 };
 
@@ -325,18 +376,25 @@ const App: React.FC = () => {
             </div>
 
             <div className="flex items-center gap-4 pl-8 border-l border-slate-200">
-              <div className="flex items-center gap-2 bg-slate-100 p-1 rounded-full border border-slate-200">
-                {(['EN', 'FR', 'AR'] as Language[]).map((l) => (
-                  <button
-                    key={l}
-                    onClick={() => setLang(l)}
-                    className={`px-3 py-1 rounded-full text-xs font-bold transition-all ${lang === l ? "bg-white text-teal-600 shadow-sm" : "text-slate-500 hover:text-slate-900"
-                      }`}
-                  >
-                    {l}
-                  </button>
-                ))}
+              {/* Language Dropdown */}
+              <div className="relative group">
+                <button className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-bold text-teal-700 hover:bg-white hover:shadow-sm transition-all">
+                  <Globe size={14} />
+                  {lang}
+                </button>
+                <div className="absolute top-full right-0 mt-2 w-24 bg-white rounded-xl shadow-xl border border-slate-100 overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 z-50">
+                  {(['EN', 'FR', 'AR'] as Language[]).filter(l => l !== lang).map((l) => (
+                    <button
+                      key={l}
+                      onClick={() => setLang(l)}
+                      className="w-full text-left px-4 py-3 text-xs font-semibold text-slate-500 hover:bg-teal-50 hover:text-teal-700 transition-colors"
+                    >
+                      {l}
+                    </button>
+                  ))}
+                </div>
               </div>
+
               <GlowButton primary className="scale-90 px-6">
                 <ShoppingCart size={16} /> {t.ctaPrimary}
               </GlowButton>
@@ -432,10 +490,10 @@ const App: React.FC = () => {
               </div>
               <div>
                 <div className="text-3xl font-black text-blue-600 mb-1">500k+</div>
-                <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">Units / Month</div>
+                <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">{t.unitsMonth}</div>
               </div>
             </div>
-            <GlowButton primary>{lang === 'EN' ? 'Facility Tour' : lang === 'FR' ? 'Visiter l\'Usine' : 'جولة في المنشأة'}</GlowButton>
+            <GlowButton primary>{t.facilityTour}</GlowButton>
           </div>
         </div>
       </section>
@@ -449,11 +507,11 @@ const App: React.FC = () => {
 
           <div className="relative z-10 text-center md:text-left grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">{lang === 'EN' ? 'Scale Your Pharmaceutical Business' : lang === 'FR' ? 'Développez Votre Activité Pharmaceutique' : 'قم بتطوير عملك الصيدلاني'}</h2>
-              <p className="text-slate-400 text-lg mb-10">{lang === 'EN' ? 'Join our elite network of distributors across Algeria. We provide competitive pricing, logistical support, and certified high-quality products.' : lang === 'FR' ? 'Rejoignez notre réseau d\'élite de distributeurs à travers l\'Algérie. Nous offrons des prix compétitifs et des produits de haute qualité.' : 'انضم إلى شبكة النخبة من الموزعين في جميع أنحاء الجزائر. نحن نقدم أسعارًا تنافسية ومنتجات عالية الجودة معتمدة.'}</p>
+              <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">{t.scaleBusiness}</h2>
+              <p className="text-slate-400 text-lg mb-10">{t.scaleSub}</p>
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 <GlowButton primary className="bg-teal-500 hover:bg-teal-400 text-white">{t.ctaPrimary}</GlowButton>
-                <GlowButton className="bg-white/5 border-white/10 text-white hover:bg-white/10">{lang === 'EN' ? 'Dealer Portal' : lang === 'FR' ? 'Portail Revendeur' : 'بوابة الوكلاء'}</GlowButton>
+                <GlowButton className="bg-white/5 border-white/10 text-white hover:bg-white/10">{t.dealerPortal}</GlowButton>
               </div>
             </div>
             <div className="hidden md:block">
@@ -461,22 +519,22 @@ const App: React.FC = () => {
                 <div className="flex items-center gap-4 mb-8">
                   <div className="w-12 h-12 rounded-full bg-teal-500/20 flex items-center justify-center text-teal-400"><ShieldCheck /></div>
                   <div>
-                    <div className="text-white font-bold">{lang === 'EN' ? 'Quality Assurance' : 'Assurance Qualité'}</div>
-                    <div className="text-slate-500 text-xs">GMP Compliant</div>
+                    <div className="text-white font-bold">{t.qualityAssurance}</div>
+                    <div className="text-slate-500 text-xs">{t.gmpCompliant}</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 mb-8">
                   <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400"><Globe /></div>
                   <div>
-                    <div className="text-white font-bold">{lang === 'EN' ? 'National Logistics' : 'Logistique Nationale'}</div>
-                    <div className="text-slate-500 text-xs">All 58 Wilayas</div>
+                    <div className="text-white font-bold">{t.nationalLogistics}</div>
+                    <div className="text-slate-500 text-xs">{t.allWilayas}</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-400"><Award /></div>
                   <div>
-                    <div className="text-white font-bold">{lang === 'EN' ? 'Product Certification' : 'Certification Produits'}</div>
-                    <div className="text-slate-500 text-xs">MOH Registered</div>
+                    <div className="text-white font-bold">{t.productCertification}</div>
+                    <div className="text-slate-500 text-xs">{t.mohRegistered}</div>
                   </div>
                 </div>
               </div>
@@ -504,22 +562,22 @@ const App: React.FC = () => {
             <div>
               <h4 className="font-bold text-slate-900 mb-6 uppercase tracking-wider text-sm">{t.nav.wholesale}</h4>
               <ul className="space-y-4">
-                <li><a href="#" className="text-slate-500 hover:text-teal-600 transition-colors">B2B Portal</a></li>
-                <li><a href="#" className="text-slate-500 hover:text-teal-600 transition-colors">Catalog Download</a></li>
-                <li><a href="#" className="text-slate-500 hover:text-teal-600 transition-colors">Reseller Terms</a></li>
-                <li><a href="#" className="text-slate-500 hover:text-teal-600 transition-colors">Compliance</a></li>
+                <li><a href="#" className="text-slate-500 hover:text-teal-600 transition-colors">{t.b2bPortal}</a></li>
+                <li><a href="#" className="text-slate-500 hover:text-teal-600 transition-colors">{t.catalogDownload}</a></li>
+                <li><a href="#" className="text-slate-500 hover:text-teal-600 transition-colors">{t.resellerTerms}</a></li>
+                <li><a href="#" className="text-slate-500 hover:text-teal-600 transition-colors">{t.compliance}</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-bold text-slate-900 mb-6 uppercase tracking-wider text-sm">ROVAC Lab</h4>
-              <p className="text-slate-500 mb-4">12 Zone Industrielle, Alger, Algérie</p>
+              <p className="text-slate-500 mb-4">{t.address}</p>
               <p className="text-slate-500 mb-4">+213 (0) 23 45 67 89</p>
               <p className="text-teal-600 font-bold">contact@rovac.dz</p>
             </div>
 
             <div>
-              <h4 className="font-bold text-slate-900 mb-6 uppercase tracking-wider text-sm">Languages</h4>
+              <h4 className="font-bold text-slate-900 mb-6 uppercase tracking-wider text-sm">{t.languagesTitle}</h4>
               <div className="flex flex-col gap-2">
                 <button onClick={() => setLang('EN')} className={`text-left text-sm ${lang === 'EN' ? 'text-teal-600 font-bold' : 'text-slate-500'}`}>English</button>
                 <button onClick={() => setLang('FR')} className={`text-left text-sm ${lang === 'FR' ? 'text-teal-600 font-bold' : 'text-slate-500'}`}>Français</button>
