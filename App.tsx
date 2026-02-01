@@ -396,7 +396,7 @@ const App: React.FC = () => {
   ];
 
   return (
-    <div className={`relative min-h-screen gradient-mesh selection:bg-teal-200 ${isRTL ? 'font-arabic' : ''}`}>
+    <div className={`relative min-h-screen gradient-mesh selection:bg-teal-200 overflow-x-hidden ${isRTL ? 'font-arabic' : ''}`}>
       <ParticleBackground />
       <GridShimmer />
 
@@ -693,8 +693,8 @@ const App: React.FC = () => {
                       key={l}
                       onClick={() => setLang(l)}
                       className={`w-full flex items-center justify-between px-5 py-4 rounded-2xl border text-sm font-bold transition-all duration-200 ${lang === l
-                          ? 'bg-teal-600 border-teal-600 text-white shadow-lg shadow-teal-200'
-                          : 'bg-white border-slate-100 text-slate-500 hover:border-slate-300'
+                        ? 'bg-teal-600 border-teal-600 text-white shadow-lg shadow-teal-200'
+                        : 'bg-white border-slate-100 text-slate-500 hover:border-slate-300'
                         }`}
                     >
                       <span>{l === 'EN' ? 'English' : l === 'FR' ? 'Français' : 'العربية'}</span>
