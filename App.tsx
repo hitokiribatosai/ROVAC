@@ -462,7 +462,12 @@ const App: React.FC = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 md:pt-48 md:pb-32 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-          <motion.div initial={{ opacity: 0, x: isRTL ? 30 : -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
+          <motion.div
+            initial={{ opacity: 0, x: isRTL ? 30 : -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col items-center md:items-start text-center md:text-left"
+          >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-50 text-teal-700 rounded-full text-sm font-bold mb-6 border border-teal-100">
               <Package size={14} /> {t.tagline}
             </div>
@@ -529,18 +534,18 @@ const App: React.FC = () => {
               <img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=400" className="rounded-2xl shadow-lg h-60 w-full object-cover" alt="Quality Control" />
             </div>
           </div>
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
             <div className="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center text-teal-600 mb-8">
               <Factory size={32} />
             </div>
             <h2 className="text-4xl font-black text-slate-900 mb-8 leading-tight">{t.labTitle}</h2>
             <p className="text-lg text-slate-600 mb-10 leading-relaxed">{t.labSub}</p>
-            <div className="grid grid-cols-2 gap-8 mb-12">
-              <div>
+            <div className="grid grid-cols-2 gap-8 mb-12 w-full max-w-md">
+              <div className="flex flex-col items-center md:items-start">
                 <div className="text-3xl font-black text-teal-600 mb-1">12+</div>
                 <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">{t.statsLab}</div>
               </div>
-              <div>
+              <div className="flex flex-col items-center md:items-start">
                 <div className="text-3xl font-black text-blue-600 mb-1">500k+</div>
                 <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">{t.unitsMonth}</div>
               </div>
@@ -557,10 +562,10 @@ const App: React.FC = () => {
             <div className="w-full h-full border-[40px] border-white/20 rounded-full translate-x-1/2" />
           </div>
 
-          <div className="relative z-10 text-center md:text-left grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">{t.scaleBusiness}</h2>
-              <p className="text-slate-400 text-lg mb-10">{t.scaleSub}</p>
+          <div className="relative z-10 text-center grid md:grid-cols-2 gap-16 items-center">
+            <div className="flex flex-col items-center md:items-start md:text-left">
+              <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight text-center md:text-left">{t.scaleBusiness}</h2>
+              <p className="text-slate-400 text-lg mb-10 text-center md:text-left">{t.scaleSub}</p>
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 <GlowButton primary className="bg-teal-500 hover:bg-teal-400 text-white">{t.ctaPrimary}</GlowButton>
                 <GlowButton className="bg-white/5 border-white/10 text-white hover:bg-white/10">{t.dealerPortal}</GlowButton>
