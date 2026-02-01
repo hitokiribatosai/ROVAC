@@ -643,6 +643,71 @@ const App: React.FC = () => {
         </div>
       </footer>
 
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            className="fixed inset-0 z-[60] bg-white md:hidden flex flex-col"
+          >
+            <div className="p-5 flex items-center justify-between border-b border-slate-100">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-gradient-to-tr from-teal-600 to-blue-700 rounded-xl flex items-center justify-center text-white shadow-lg">
+                  <FlaskConical size={24} />
+                </div>
+                <span className="text-xl font-bold text-slate-900">ROVAC</span>
+              </div>
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                className="p-2 bg-slate-50 rounded-full hover:bg-slate-100 text-slate-500 transition-colors"
+              >
+                <X size={24} />
+              </button>
+            </div>
+
+            <div className="flex-1 overflow-y-auto p-6 flex flex-col">
+              <nav className="flex flex-col space-y-6">
+                {navItems.map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="text-3xl font-bold text-slate-900 tracking-tight hover:text-teal-600 transition-colors"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </nav>
+
+              <div className="mt-10 pt-10 border-t border-slate-100">
+                <div className="flex items-center gap-2 mb-6 text-slate-400 font-bold text-xs uppercase tracking-widest">
+                  <Globe size={14} />
+                  {t.languagesTitle}
+                </div>
+                <div className="flex flex-col gap-3">
+                  {(['EN', 'FR', 'AR'] as Language[]).map((l) => (
+                    <button
+                      key={l}
+                      onClick={() => setLang(l)}
+                      className={`w-full flex items-center justify-between px-5 py-4 rounded-2xl border text-sm font-bold transition-all duration-200 ${lang === l
+                          ? 'bg-teal-600 border-teal-600 text-white shadow-lg shadow-teal-200'
+                          : 'bg-white border-slate-100 text-slate-500 hover:border-slate-300'
+                        }`}
+                    >
+                      <span>{l === 'EN' ? 'English' : l === 'FR' ? 'Français' : 'العربية'}</span>
+                      {lang === l && <div className="w-2 h-2 bg-white rounded-full"></div>}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Full Product Modal */}
       <AnimatePresence>
         {isProductModalOpen && (
